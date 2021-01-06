@@ -45,8 +45,9 @@ Use the copy function below to do the following:
     2. Return a copy of the received array  
 */
 
-function copy(/*your code here*/){
-    /*your code here*/
+function copy(arr){
+    let copyOriginalFalvors = [...arr]/*spread operator*/
+    return(copyOriginalFalvors);
 }    
 
 
@@ -57,15 +58,20 @@ function copy(/*your code here*/){
 Confirm that an array is exactly 31 flavors. Your function should accept:
     1. an array as a parameter
     2. Check to see if the array given is 31 flavors
-    3. Your function should return a boolean TRUE if the length of the array is 31 and FALSE if the length of the array is NOT 31.
-  
+    3. Your function should return a boolean TRUE if the length of the array is 31 and FALSE if the length of the array is NOT 31.*/
 
-For Example: is31Flavors(originalFlavors) will return true if your code is working properly
+
+/*For Example: is31Flavors(originalFlavors) will return true if your code is working properly
 */
 
 
-function is31Flavors(/*your code here*/){
-   /*your code here*/
+function is31Flavors(originalFlavors){
+   if (originalFlavors.length === 31);{
+       return true;
+   }
+   if (originalFlavors.length !== 31);{
+       return false;
+   }
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -81,8 +87,10 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
-   /*your code here*/
+function addFlavor(originalFlavors){
+   originalFlavors.unshift("Rainbow Sherbert");
+
+   return(originalFlavors);
 }
 
 
@@ -97,8 +105,10 @@ Use the removeLastFlavor function below to do the following:
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/){
-   /*your code here*/
+function removeLastFlavor(originalFlavors){
+    originalFlavors.pop();
+
+    return(originalFlavors);
 }
 
 
@@ -114,8 +124,9 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
-    /*your code here*/
+function getFlavorByIndex(originalFlavors){
+    return originalFlavors [2];
+
 }
 
 
@@ -134,8 +145,10 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-    /*your code here*/
+function removeFlavorByName(originalFlavors){
+    originalFlavors.splice(29,1);
+
+    return (originalFlavors);
 }
 
 
@@ -160,9 +173,16 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-    /*your code here*/
-}
+function filterByWord(arr){
+    let filterChocolate = []
+    for (let i=0; i<arr.length; i++){
+        if (arr[i].includes("Chocolate")){
+            filterChocolate.push(arr[i])
+        }
+    }
+    return filterChocolate
+    }
+
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
